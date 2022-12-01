@@ -1,16 +1,16 @@
 import { SponsorCall } from "../generated/SponsorCat/SponsorCat";
-import { Sponsor, Sponsorship, Creator } from "../generated/schema";
+import { User, Sponsorship } from "../generated/schema";
 
 export function handleSponsor(call: SponsorCall): void {
-  let sponsor = Sponsor.load(call.from);
+  let sponsor = User.load(call.from);
   if (sponsor == null) {
-    sponsor = new Sponsor(call.from);
+    sponsor = new User(call.from);
     sponsor.createdAt = call.block.timestamp;
     sponsor.save();
   }
-  let creator = Creator.load(call.inputs.creator);
+  let creator = User.load(call.inputs.creator);
   if (creator == null) {
-    creator = new Creator(call.inputs.creator);
+    creator = new User(call.inputs.creator);
     creator.createdAt = call.block.timestamp;
     creator.save();
   }
