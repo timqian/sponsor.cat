@@ -17,7 +17,7 @@ import Footer from "./Footer";
 const { chains, provider } = configureChains(
   [
     chain.mainnet,
-    // chain.goerli,
+    chain.goerli,
     //, chain.polygon, chain.optimism, chain.arbitrum
   ],
   [

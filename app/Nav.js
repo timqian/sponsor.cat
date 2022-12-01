@@ -25,14 +25,14 @@ export default function Example() {
   return (
     <Disclosure
       as="nav"
-      className="bg-white fixed top-0 w-full z-50 bg-white/50 backdrop-blur-xl"
+      className="fixed top-0 w-full z-10 bg-white/80 backdrop-blur-xl shadow"
     >
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div
               className={
-                "relative flex h-20 items-center justify-between  border-b"
+                "relative flex h-16 items-center justify-between"
               }
             >
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -54,9 +54,10 @@ export default function Example() {
                   >
                     <Image
                       src="/logo.png"
+                      alt="logo"
                       width={45}
                       height={45}
-                      className="rounded-full p-1 bg-white border"
+                      className="rounded-full p-1 bg-white"
                     ></Image>
                   </Link>
 
