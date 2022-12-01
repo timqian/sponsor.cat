@@ -1,0 +1,25 @@
+specVersion: 0.0.4
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: SponsorCat
+    network: goerli
+    source:
+      address: "0xa9498a8b88eae09bfdd7a8fe4dec39b4d172036a"
+      abi: SponsorCat
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Creator
+        - Sponsor
+        - Sponsorship
+      abis:
+        - name: SponsorCat
+          file: ./abis/SponsorCat.json
+      callHandlers:
+        - function: "sponsor(address)"
+          handler: "handleSponsor"
+      file: ./src/sponsor-cat.ts

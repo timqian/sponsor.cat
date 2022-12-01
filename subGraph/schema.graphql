@@ -1,0 +1,19 @@
+type Creator @entity {
+  id: Bytes! # address
+  createdAt: BigInt!
+  sponsors: [Sponsorship!]! @derivedFrom(field: "creator")
+}
+
+type Sponsor @entity {
+  id: Bytes! # address
+  createdAt: BigInt!
+  sponsoring: [Sponsorship!]! @derivedFrom(field: "sponsor")
+}
+
+type Sponsorship @entity {
+  id: Bytes!
+  creator: Creator! # creator
+  sponsor: Sponsor! # sponsor
+  amount: BigInt! # uint256
+  createdAt: BigInt! # uint256
+}
