@@ -1,10 +1,22 @@
 "use client";
 import Link from "next/link";
 import ClaimBtn from "./ClaimBtn";
+import People from "./People2";
+import Features from "./Features";
+import { ROUTES_MANIFEST } from "next/dist/shared/lib/constants";
+
 export default function App() {
   return (
     <div className="min-h-screen">
-      <div className="container max-w-lg px-4 pt-52 pb-32 mx-auto mt-px text-left md:max-w-none md:text-center">
+      <div
+        // style={{
+        //   backgroundImage: "url('/catpaw.jpg')",
+        //   backgroundSize: "500px 200px",
+        //   backgroundRepeat: "no-repeat",
+        //   backgroundPosition: "left top",
+        // }}
+        className="container max-w-lg px-4 mt-52 pb-8 mx-auto text-left md:max-w-none md:text-center"
+      >
         <h1 className="text-5xl font-extrabold leading-10 tracking-tight text-left text-gray-900 md:text-center sm:leading-none md:text-6xl lg:text-7xl">
           <span className="inline md:block">Sponsor creators</span>{" "}
           <span className="background-animate relative mt-2 text-transparent bg-clip-text bg-gradient-to-br from-green-400 via-blue-500 to-purple-500 md:inline-block">
@@ -14,6 +26,7 @@ export default function App() {
         <div className="mx-auto mt-5 md:mt-8 text-gray-600 text-xl md:max-w-lg md:text-center">
           A decentralized sponsor system powered by NFTs
         </div>
+
         <div className="flex flex-col items-center mt-12 text-center">
           <span className="relative inline-flex w-full md:w-auto">
             {/* <Link
@@ -23,7 +36,7 @@ export default function App() {
             >
               Create your profile
             </Link> */}
-            <ClaimBtn />
+            {/* <ClaimBtn /> */}
           </span>
           {/* <a href="#_" className="mt-3 text-sm text-indigo-500">
             View creators
@@ -31,6 +44,8 @@ export default function App() {
         </div>
       </div>
       {/* End Main Hero Content */}
+      <People />
+      <Features />
     </div>
   );
 }

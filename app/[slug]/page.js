@@ -1,12 +1,10 @@
 "use client";
 
-import Image from "next/image";
-import Tabs from "./Tabs";
 import { notFound } from "next/navigation";
 import { useEffect, useState } from "react";
-import { useEnsName, useEnsAddress, useEnsAvatar } from "wagmi";
-import SponsorBtn from "./SponsorBtn";
-
+import { useEnsName, useEnsAddress } from "wagmi";
+import Profile from "./Profile";
+import Detail from "./Detail";
 
 function isEns(address) {
   return address.includes(".eth");
@@ -52,30 +50,9 @@ export default function Page({ params }) {
   }, [ensAddress, ensName]);
 
   return (
-    <section className="min-h-screen max-w-5xl mx-auto pt-32 px-4 md:px-8 ">
-      <div className="flex justify-between">
-        <div className="flex">
-          <Image
-            src={`https://effigy.im/a/${address}.svg`}
-            alt="avatar"
-            width={100}
-            height={100}
-            className="rounded-full border"
-            onErrorCapture
-          />
-          <div className="mx-4 flex flex-col justify-center">
-            {/* <h1 className="text-4xl font-bold text-gray-800">Tim Qian </h1> */}
-            <h2 className="text-4xl font-bold text-gray-800 my-1">{name}</h2>
-            <span className="text-sm text-gray-600">{address}</span>
-            {/* <p> Building sponsor.cat </p> */}
-          </div>
-        </div>
-        <div className="flex flex-col justify-center">
-          <SponsorBtn address={address} />
-        </div>
-      </div>
-
-      <Tabs />
-    </section>
+    <div className="px-4 mt-16 bg-gray-50 border-b min-h-screen">
+      <Profile address={address} name={name} />
+      <Detail address={address} />
+    </div>
   );
 }

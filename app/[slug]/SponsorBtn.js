@@ -10,7 +10,7 @@ import ETHToDollar from "./ETHToDollar";
 import { ethers } from "ethers";
 
 export default function SponsorBtn({ address }) {
-  let [isOpen, setIsOpen] = useState(true);
+  let [isOpen, setIsOpen] = useState(false);
   const [ETHAmount, setETHAmount] = useState(0.01);
 
   const { config } = usePrepareContractWrite({
@@ -29,9 +29,9 @@ export default function SponsorBtn({ address }) {
     write: sponsor,
   } = useContractWrite(config);
 
-	const { data: txData, isLoading: txLoading } = useWaitForTransaction({
-		hash: writeData?.hash,
-	});
+  const { data: txData, isLoading: txLoading } = useWaitForTransaction({
+    hash: writeData?.hash,
+  });
 
   function closeModal() {
     setIsOpen(false);
@@ -140,7 +140,7 @@ export default function SponsorBtn({ address }) {
                             ❤️ Sponsor
                           </button>
                           {writeLoading && <div>Check Wallet</div>}
-													{txLoading && <div>Waiting for transaction</div>}
+                          {txLoading && <div>Waiting for transaction</div>}
                           {txData && (
                             <div>Transaction: {JSON.stringify(txData)}</div>
                           )}
