@@ -11,7 +11,7 @@ import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 // import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 
-import Nav from "./Nav2";
+import Nav from "./Nav3";
 import Footer from "./Footer";
 
 const { chains, provider } = configureChains(
