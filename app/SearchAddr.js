@@ -62,7 +62,7 @@ export default function SearchAddr() {
             id="search"
             name="search"
             autoComplete="off"
-            className="block w-full rounded-md border border-gray-300 bg-white py-2 pl-10 pr-3 leading-5 placeholder-gray-500 focus:border-indigo-500 focus:placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm"
+            className="block w-full rounded-full border border-gray-300 bg-white py-2 pl-10 pr-3 leading-5 placeholder-gray-500 focus:border-indigo-500 focus:placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm"
             placeholder="ETH address or ENS name"
             type="text"
             onKeyDown={handleKeyDown}
@@ -76,13 +76,13 @@ export default function SearchAddr() {
           <div
             className={classNames(
               !focus && "hidden",
-              "absolute bg-white w-full mt-2 rounded-lg border divide-y divide-gray-200"
+              "absolute bg-white w-full mt-2 rounded-lg border divide-y divide-gray-200 py-1"
             )}
           >
             {value && (
               <Link
                 href={`/${value}`}
-                className="flex justify-between p-4 hover:bg-gray-100 rounded-t-lg"
+                className="flex justify-between p-4 hover:bg-gray-100"
               >
                 <span>View profile of {value}</span>
                 <span>↵</span>

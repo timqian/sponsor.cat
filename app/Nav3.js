@@ -3,16 +3,14 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import classNames from "../utils/classNames";
+import classNames from "clsx";
 import ConnectButton from "./ConnectBtn";
 // import { ConnectButton } from "@rainbow-me/rainbowkit";
 import SearchAddr from "./SearchAddr";
+
 export default function Nav() {
   return (
-    <Disclosure
-      as="nav"
-      className="fixed top-0 w-full z-10 bg-white/90 backdrop-blur-sm border"
-    >
+    <Disclosure as="nav" className={classNames("w-full")}>
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">

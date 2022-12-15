@@ -52,7 +52,6 @@ export default function RootLayout({ children }) {
               fontStack: "system",
             })}
           >
-            <Nav />
             {children}
             <Footer />
           </RainbowKitProvider>
