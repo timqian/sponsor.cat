@@ -12,6 +12,7 @@ export default function UserCard({ sponsor }) {
     address,
     chainId: 1,
   });
+
   return (
     <div
       key={`${address}-${amount}-${createdAt}`}

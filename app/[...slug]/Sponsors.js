@@ -6,7 +6,6 @@ export default function Sponsors({ sponsors }) {
       {sponsors?.map((sponsor) => (
         <UserCard sponsor={sponsor} />
       ))}
-      {/* {JSON.stringify(sponsors)} */}
     </div>
   );
 }

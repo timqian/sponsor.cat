@@ -10,6 +10,24 @@ function isAddr(value) {
   return ethers.utils.isAddress(value) || value.includes(".eth");
 }
 
+const Person = ({ address, description }) => (
+  <Link
+    href={`/${address}`}
+    className="p-4 hover:bg-gray-100 flex justify-between items-center"
+  >
+    <div className="flex gap-2">
+      <Image
+        className="w-6 rounded-full"
+        src={`https://effigy.im/a/${address}.svg`}
+        alt=""
+        width={45}
+        height={45}
+      />
+      <span>{address}</span>
+    </div>
+    <span className="text-sm text-gray-400">{description}</span>
+  </Link>
+);
 export default function SearchAddr() {
   const router = useRouter();
 
@@ -58,44 +76,20 @@ export default function SearchAddr() {
           <div
             className={classNames(
               !focus && "hidden",
-              "absolute bg-white w-full mt-2 rounded-lg border"
+              "absolute bg-white w-full mt-2 rounded-lg border divide-y divide-gray-200"
             )}
           >
             {value && (
               <Link
                 href={`/${value}`}
-                className="flex justify-between p-4 border-b hover:bg-gray-100 rounded-t-lg"
+                className="flex justify-between p-4 hover:bg-gray-100 rounded-t-lg"
               >
                 <span>View profile of {value}</span>
                 <span>↵</span>
               </Link>
             )}
-            <Link
-              href="/vitalic.eth"
-              className="p-4 border-b  hover:bg-gray-100 flex gap-2"
-            >
-              <Image
-                className="w-6 rounded-full"
-                src="https://effigy.im/a/vitalic.eth.svg"
-                alt=""
-                width={45}
-                height={45}
-              />
-              <span>vitalic.eth</span>
-            </Link>
-            <Link
-              href="/timqian.eth"
-              className="p-4 hover:bg-gray-100 flex gap-2 rounded-b-lg"
-            >
-              <Image
-                className="w-6 rounded-full"
-                src="https://effigy.im/a/timqian.eth.svg"
-                alt=""
-                width={45}
-                height={45}
-              />
-              <span>timqian.eth</span>
-            </Link>
+            <Person address="vitalik.eth" description="Founder of Ethereum" />
+            <Person address="timqian.eth" description="Building sponor.cat" />
           </div>
         </div>
       </div>

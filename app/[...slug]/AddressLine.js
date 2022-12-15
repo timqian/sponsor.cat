@@ -11,14 +11,7 @@ export default function addr({ address, ensName }) {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="flex items-center justify-center text-gray-800 ">
-          {/* <svg
-              viewBox="0 0 24 24"
-              className="w-5 h-5 inline-block mr-1"
-              fill="currentColor"
-            >
-              <path d="M11.944 17.97L4.58 13.62 11.943 24l7.37-10.38-7.372 4.35h.003zM12.056 0L4.69 12.223l7.365 4.354 7.365-4.35L12.056 0z" />
-            </svg> */}
+        <Menu.Button className="flex space-x-1 items-center justify-center text-gray-800 ">
           <span className="text-2xl font-bold">
             {ensName || shortAddress(address)}
           </span>

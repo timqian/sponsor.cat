@@ -11,8 +11,8 @@ export default function Detail({ address }) {
   const { user, isLoading, isError } = useUser({ address });
 
   return (
-    <div className="">
-      <div className="mx-auto max-w-5xl py-12">
+    <div className="bg-gray-50 px-4 py-12 ">
+      <div className="mx-auto max-w-5xl">
         <div className="mx-auto max-w-5xl">
           <dl className="space-y-2">
             <Disclosure as="div" className="pt-6" defaultOpen>

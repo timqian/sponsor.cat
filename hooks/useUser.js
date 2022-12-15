@@ -12,7 +12,6 @@ export default function userUser({ address }) {
       isError: false,
     };
   }
-  console.log(address);
   const { data, error } = useSWR(
     `{
 			user(id: "${address}") {

@@ -1,14 +1,14 @@
 import SponsorBtn from "./SponsorBtn";
 import shortAddress from "../../utils/shortAddress";
 import Image from "next/image";
-import Tabs from "./Tabs";
+
 import AddressLine from "./AddressLine";
 
 export default function Profile({ address, name }) {
-  // const { user, isLoading, isError } = useUser({ address });
+
   return (
-    <section className="max-w-5xl mx-auto pt-12">
-      <div className="flex justify-between">
+    <section className="mt-16 ">
+      <div className="flex justify-between max-w-5xl py-12 px-4 mx-auto">
         <div className="flex">
           <Image
             src={
@@ -21,10 +21,6 @@ export default function Profile({ address, name }) {
             onErrorCapture
           />
           <div className="mx-4 flex flex-col justify-center">
-            {/* <h2 className="text-3xl font-bold text-gray-800 my-1">
-              {name || "Unnamed"}
-            </h2> */}
-            {/* <span className="text-sm text-gray-600">{}</span> */}
             <AddressLine address={address} ensName={name} />
           </div>
         </div>
@@ -32,7 +28,7 @@ export default function Profile({ address, name }) {
           <SponsorBtn address={address} />
         </div>
       </div>
-      {/* <Tabs /> */}
+
       {/* <Sponsors /> */}
     </section>
   );
