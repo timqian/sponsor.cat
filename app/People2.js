@@ -107,7 +107,6 @@ export default function People() {
           <div className="absolute right-0 md:w-40 w-20 h-20 bg-gradient-to-l from-white to-white/0"></div>
           <ul
             id="flavoursContainer"
-            ref={parent}
             className="w-full flex flex-nowrap overflow-x-scroll"
           >
             {people.map((person, i) => (
