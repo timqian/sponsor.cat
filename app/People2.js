@@ -1,89 +1,143 @@
+import { useEffect, useRef } from "react";
+import animateScrollTo from "animated-scroll-to";
+import Link from "next/link";
+
 const people = [
   {
-    name: "Michael Foster",
+    name: "ens.eth",
     role: "Co-Founder / CTO",
     imageUrl:
       "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
   },
   {
-    name: "Michael Foster",
+    name: "vitalik.eth",
+    role: "vitalik.eth",
+    imageUrl:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+  },
+  {
+    name: "timqian.eth",
+    address: "timqian.eth",
+    imageUrl:
+      "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+  },
+  {
+    name: "ashu.eth",
+    role: "Co-Founder / CEO",
+    imageUrl:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+  },
+  {
+    name: "harper.eth",
+    role: "Co-Founder / CEO",
+    imageUrl:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+  },
+  {
+    name: "nick.eth",
     role: "Co-Founder / CTO",
     imageUrl:
       "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
   },
   {
-    name: "Michael Foster",
+    name: "guoyu.eth",
     role: "Co-Founder / CTO",
     imageUrl:
       "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
   },
   {
-    name: "Michael Foster",
+    name: "Ethereum.eth",
     role: "Co-Founder / CTO",
     imageUrl:
       "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
   },
   {
-    name: "Michael Foster",
+    name: "bored.eth",
+    role: "Co-Founder / CTO",
+    imageUrl:
+      "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+  },
+
+  {
+    name: "hublot.eth",
     role: "Co-Founder / CTO",
     imageUrl:
       "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
   },
   {
-    name: "Michael Foster",
+    name: "benahorowitz.eth",
     role: "Co-Founder / CTO",
     imageUrl:
       "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
   },
   {
-    name: "Michael Foster",
-    role: "Co-Founder / CTO",
-    imageUrl:
-      "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
-  },
-  {
-    name: "Michael Foster",
-    role: "Co-Founder / CTO",
-    imageUrl:
-      "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
-  },
-  {
-    name: "Michael Foster",
-    role: "Co-Founder / CTO",
-    imageUrl:
-      "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
-  },
-  {
-    name: "Michael Foster",
+    name: "agm.eth",
     role: "Co-Founder / CTO",
     imageUrl:
       "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
   },
 ];
 
-export default function Example() {
+function isElementInViewport(el, parent) {
+  const parentRect = parent.getBoundingClientRect();
+  const elRect = el.getBoundingClientRect();
+  return elRect.right > parentRect.left;
+}
+
+export default function People() {
+  // make it auto scroll, ref: https://stackoverflow.com/a/65460711/4674834
+  useEffect(() => {
+    const id = setInterval(() => {
+      const firstEl = document.querySelector("#flavoursContainer li");
+      const parentEl = document.querySelector("#flavoursContainer");
+      if (!isElementInViewport(firstEl, parentEl)) {
+        parentEl.appendChild(firstEl, parentEl);
+        parentEl.scrollTo(parentEl.scrollLeft - firstEl.offsetWidth, 0);
+      }
+      if (parentEl.scrollLeft !== parentEl.scrollWidth) {
+        parentEl.scrollTo(parentEl.scrollLeft + 1, 0);
+      }
+    }, 25);
+    return () => clearInterval(id);
+  }, []);
   return (
-    <div className="my-8">
-      <div className="mx-auto text-center max-w-5xl">
-        <ul className="mx-auto inline-flex flex-nowrap overflow-scroll -space-x-3">
-          {people.map((person) => (
-            <li key={person.name} className="flex-shrink-0 ">
-              <div className="flex-shrink-0 flex">
-                <img
-                  className="h-20 w-20 rounded-full flex-shrink-0  ring-2 ring-white"
-                  src={person.imageUrl}
-                  alt=""
-                />
-                {/* <div className="space-y-2">
-                  <div className="text-xs font-medium lg:text-sm">
-                    <h3>{person.name}</h3>
-                    <p className="text-indigo-600">{person.role}</p>
-                  </div>
-                </div> */}
-              </div>
-            </li>
-          ))}
-        </ul>
+    <div className="mt-24">
+      <div className="flex justify-center">
+        <div className="relative max-w-4xl ">
+          <div className="absolute left-0 md:w-40 w-20 h-20 bg-gradient-to-r from-white to-white/0"></div>
+          <div className="absolute right-0 md:w-40 w-20 h-20 bg-gradient-to-l from-white to-white/0"></div>
+          <ul
+            id="flavoursContainer"
+            ref={parent}
+            className="w-full flex flex-nowrap overflow-x-scroll"
+          >
+            {people.map((person, i) => (
+              <li
+                // ref={i === 0 ? firstChild : null}
+                key={person.name}
+                className="flex-shrink-0 "
+              >
+                <Link
+                  className="text-gray-400 hover:text-gray-700 text-sm flex-shrink-0 flex flex-col items-center"
+                  href={`/${person.name}`}
+                >
+                  <img
+                    className="h-20 w-20 rounded-full flex-shrink-0  ring-2 ring-white mx-4"
+                    src={`https://effigy.im/a/${person.name}.svg`}
+                    alt=""
+                  />
+                  <span className="pt-2 ">{person.name}</span>
+                  {/* <div className="space-y-2">
+                    <div className="text-xs font-medium lg:text-sm">
+                      <h3>{person.name}</h3>
+                      <p className="text-indigo-600">{person.role}</p>
+                    </div>
+                  </div> */}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
