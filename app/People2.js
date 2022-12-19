@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import animateScrollTo from "animated-scroll-to";
 import Link from "next/link";
 
 const people = [
