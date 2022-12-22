@@ -54,10 +54,10 @@ export default function Nav() {
                     GitHub
                   </a>
                   <a
-                    href="https://etherscan.io/address/0x9809EFE2EB775C932BC1a8573e28B75F07aa7783"
+                    href="https://opensea.io/collection/sponsor-cat"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                   >
-                    Contract
+                    OpenSea
                   </a>
                 </div>
               </div>
@@ -112,10 +112,10 @@ export default function Nav() {
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
-                href="https://etherscan.io/address/0x9809EFE2EB775C932BC1a8573e28B75F07aa7783"
+                href="https://opensea.io/collection/sponsor-cat"
                 className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-600 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-800"
               >
-                Contract
+                OpenSea
               </Disclosure.Button>
             </div>
             <div className="border-t border-gray-200 py-4 pl-3">
