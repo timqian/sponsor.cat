@@ -1,12 +1,21 @@
+/**
+ * TODO
+ * 1. Get address of creator from id
+ * 2. Get ENS name of creator from address if possible
+ * 3. Return NFT JSON
+ */
 export default function handler(req, res) {
-	// TODO: get address/ens fron id                                                                                                                                                                                                                                                                                                                                                                                                                    
   const { id } = req.query;
-	res.json({
-		"description": "Friendly OpenSea Creature that enjoys long swims in the ocean.", 
-		"external_url": `https://openseacreatures.io/${id}`, 
-		"image": "https://storage.googleapis.com/opensea-prod.appspot.com/puffs/3.png", 
-		"name": "Sponsor of Tim Qian",
-		// "attributes": [ ... ]
-	});
+  // ref: https://vercel.com/docs/concepts/functions/serverless-functions/edge-caching#cache-control
+  res.setHeader("Cache-Control", "s-maxage=86400");
+  res.json({
+    description:
+      "Sponsor",
+    external_url: `https://sponsor.cat/`,
+    image:
+      "https://sponsor.cat/logo.png",
+    name: `Sponsor of ${id}`,
+    // "attributes": [ ... ]
+  });
   // res.end(`Post: ${id}`);
 }
