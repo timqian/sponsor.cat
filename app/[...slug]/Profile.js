@@ -20,14 +20,15 @@ export default function Profile({ address, name }) {
           />
           <div className="mx-4 flex flex-col justify-center">
             <AddressLine address={address} ensName={name} />
+            {/* <span className="font-sm text-sm text-gray-400 pt-1">
+              First sponsor:{" "} timqian.eth
+            </span> */}
           </div>
         </div>
         <div className="flex flex-col justify-center">
           <SponsorBtn address={address} />
         </div>
       </div>
-
-      {/* <Sponsors /> */}
     </section>
   );
 }

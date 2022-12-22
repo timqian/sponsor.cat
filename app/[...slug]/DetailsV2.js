@@ -4,6 +4,7 @@ import { Disclosure } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import Sponsors from "./Sponsors";
 import useUser from "../../hooks/useUser";
+import SponsorBtn from "./SponsorBtn";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -23,7 +24,7 @@ export default function Detail({ address }) {
                   <dt className="text-lg">
                     <Disclosure.Button
                       className={classNames(
-                        "flex w-full items-start justify-between text-left text-s-400 bg-gray-50 border-x border-t px-4 py-2",
+                        "flex w-full items-start justify-between text-left bg-gray-50 border-x border-t px-4 py-2",
                         open ? "rounded-t-lg" : "rounded-lg"
                       )}
                     >
@@ -53,6 +54,9 @@ export default function Detail({ address }) {
                     )}
                     {isError && <div>Network issue</div>}
                     <Sponsors sponsors={user?.sponsors} />
+                    {!isLoading && (!user || user.sponsors.length === 0) && (
+                      <SponsorBtn text="Be the first sponsor" />
+                    )}
                   </Disclosure.Panel>
                 </div>
               )}
@@ -63,7 +67,7 @@ export default function Detail({ address }) {
                   <dt className="text-lg">
                     <Disclosure.Button
                       className={classNames(
-                        "flex w-full items-start justify-between text-left text-gray-400 bg-slate-50 border-t border-x px-4 py-2",
+                        "flex w-full items-start justify-between text-left bg-slate-50 border-t border-x px-4 py-2",
                         open ? "rounded-t-lg" : "rounded-lg"
                       )}
                     >

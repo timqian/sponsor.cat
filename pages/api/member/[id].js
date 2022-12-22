@@ -10,11 +10,11 @@ export default function handler(req, res) {
   res.setHeader("Cache-Control", "s-maxage=86400");
   res.json({
     description:
-      "Sponsor",
+      "Sponsoring a creator on sponsor.cat is a way to support them and their work.",
     external_url: `https://sponsor.cat/`,
     image:
       "https://sponsor.cat/logo.png",
-    name: `Sponsor of ${id}`,
+    name: `Sponsor Cat #${id}`,
     // "attributes": [ ... ]
   });
   // res.end(`Post: ${id}`);

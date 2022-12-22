@@ -10,8 +10,9 @@ import {
 import contractInfo from "../../contract/index";
 import ETHToDollar from "./ETHToDollar";
 import { ethers } from "ethers";
+import Button from "../../components/Button";
 
-export default function SponsorBtn({ address }) {
+export default function SponsorBtn({ address, text }) {
   let [isOpen, setIsOpen] = useState(false);
   const [ETHAmount, setETHAmount] = useState(0.01);
 
@@ -45,13 +46,23 @@ export default function SponsorBtn({ address }) {
 
   return (
     <>
-      <button
-        type="button"
-        onClick={openModal}
-        className="px-4 py-2 text-white bg-slate-800 border border-transparent rounded-full hover:bg-slate-700 font-medium"
-      >
-        ❤️&nbsp;Sponsor
-      </button>
+      {!text ? (
+        <button
+          type="button"
+          onClick={openModal}
+          className="px-4 py-2 text-white bg-slate-800 border border-transparent rounded-full hover:bg-slate-700 font-medium"
+        >
+          ❤️&nbsp;Sponsor
+        </button>
+      ) : (
+        <button
+          type="button"
+          onClick={openModal}
+          className="px-4 py-2 rounded-full hover:bg-gray-200 font-medium"
+        >
+          ❤️&nbsp;{text}
+        </button>
+      )}
 
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-50" onClose={closeModal}>
@@ -139,12 +150,22 @@ export default function SponsorBtn({ address }) {
                             onClick={sponsor}
                             className="mt-6 w-full px-4 py-2 text-white bg-slate-800 border border-transparent rounded-lg hover:bg-slate-700"
                           >
-                            ❤️ Sponsor
+                            {writeLoading ? (
+                              <span>Check your Wallet</span>
+                            ) : (
+                              <span>❤️ Sponsor</span>
+                            )}
                           </button>
-                          {writeLoading && <div>Check Wallet</div>}
-                          {txLoading && <div>Waiting for transaction</div>}
+
+                          {txLoading && (
+                            <div className="mt-6 w-full text-gray-600">
+                              Waiting for transaction....
+                            </div>
+                          )}
                           {txData && (
-                            <div>Transaction: {JSON.stringify(txData)}</div>
+                            <div className="mt-6 w-full text-gray-600">
+                              Transaction done!
+                            </div>
                           )}
                         </div>
                       </Tab.Panel>
