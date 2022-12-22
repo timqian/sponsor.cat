@@ -52,23 +52,23 @@ export default function Page({ params }) {
     }
   }, [ensAddress, ensName]);
 
-  if (!address && addrLoading) {
-    return (
-      <section className="animate-pulse max-w-5xl mx-auto mt-28 mb-12 px-4">
-        <div className="flex justify-between ">
-          <div className="flex items-center gap-4">
-            <div className="rounded-full bg-slate-200 h-24 w-24"></div>
-            <div className="w-40 h-8 bg-slate-200"></div>
-          </div>
-          <div className="flex flex-col justify-center">
-            <button className="bg-slate-200 w-20 h-10"></button>
-          </div>
-        </div>
-        <div className="w-full bg-slate-200 h-48 mt-32"></div>
-        <div className="w-full bg-slate-200 h-48 mt-20"></div>
-      </section>
-    );
-  }
+  // if (!address && addrLoading) {
+  //   return (
+  //     <section className="animate-pulse max-w-5xl mx-auto mt-28 mb-12 px-4">
+  //       <div className="flex justify-between ">
+  //         <div className="flex items-center gap-4">
+  //           <div className="rounded-full bg-slate-200 h-24 w-24"></div>
+  //           <div className="w-40 h-8 bg-slate-200"></div>
+  //         </div>
+  //         <div className="flex flex-col justify-center">
+  //           <button className="bg-slate-200 w-20 h-10"></button>
+  //         </div>
+  //       </div>
+  //       <div className="w-full bg-slate-200 h-48 mt-32"></div>
+  //       <div className="w-full bg-slate-200 h-48 mt-20"></div>
+  //     </section>
+  //   );
+  // }
 
   // ens name don't have address
   if (slugName && !ensAddress && !addrLoading) {
@@ -76,10 +76,29 @@ export default function Page({ params }) {
   }
 
   return (
-    <div className="border-b">
-      <Profile address={address} name={name} />
-      <Tabs creator={creator} tabName={tabName} />
-      <Detail address={address} />
+    <div className="">
+      {/* {address && (
+        <> */}
+          <Profile address={address} name={name} />
+          <Tabs creator={creator} tabName={tabName} />
+          <Detail address={address} />
+        {/* </>
+      )}
+      {!address && addrLoading && (
+        <section className="animate-pulse max-w-5xl mx-auto mt-28 mb-12 px-4">
+          <div className="flex justify-between ">
+            <div className="flex items-center gap-4">
+              <div className="rounded-full bg-slate-200 h-24 w-24"></div>
+              <div className="w-40 h-8 bg-slate-200"></div>
+            </div>
+            <div className="flex flex-col justify-center">
+              <button className="bg-slate-200 w-20 h-10"></button>
+            </div>
+          </div>
+          <div className="w-full bg-slate-200 h-48 mt-32"></div>
+          <div className="w-full bg-slate-200 h-48 mt-20"></div>
+        </section>
+      )} */}
     </div>
   );
 }

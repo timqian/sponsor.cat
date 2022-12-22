@@ -1,5 +1,6 @@
+"use client";
+
 import { useEnsName } from "wagmi";
-import { ethers } from "ethers";
 import dayjs from "dayjs";
 import Link from "next/link";
 import Image from "next/image";
@@ -39,7 +40,7 @@ export default function UserCard({ sponsor }) {
         >
           {ensName || shortAddress(address)}
         </Link>
-        <p className="truncate text-sm text-gray-500 flex items-center">
+        <div className="truncate text-sm text-gray-500 flex items-center">
           <svg
             viewBox="0 0 24 24"
             className="w-3 h-3 inline-block"
@@ -49,7 +50,7 @@ export default function UserCard({ sponsor }) {
           </svg>
           {amount / 1000000000000000000} ETH at{" "}
           {dayjs(createdAt * 1000).format("YYYY-MM-DD")}
-        </p>
+        </div>
       </div>
     </div>
   );

@@ -2,19 +2,19 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <section className="text-gray-700 bg-white body-font tails-selected-element">
-      <div className="container flex flex-col items-center px-8 py-8 mx-auto max-w-7xl sm:flex-row">
+    <section className="text-gray-700 bg-white body-font tails-selected-element mt-12">
+      <div className="container flex flex-col items-center px-8 py-8 mx-auto max-w-7xl sm:flex-row  border-t">
         <Link
           href="/"
           className="text-xl font-black leading-none text-gray-900 select-none logo"
         >
           Sponsor.cat
         </Link>
-        <p className="mt-4 text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l sm:border-gray-200 sm:mt-0">
-          Made with ♡ by timqian
-        </p>
+        <span className="mt-4 text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l sm:border-gray-200 sm:mt-0">
+          Made with ♡ by timqian.eth
+        </span>
         <span className="inline-flex justify-center mt-4 space-x-5 sm:ml-auto sm:mt-0 sm:justify-start">
-          <a href="#" className="text-gray-400 hover:text-gray-500">
+          <a href="https://github.com/timqian/sponsor.cat" className="text-gray-400 hover:text-gray-500">
             <span className="sr-only">GitHub</span>
             <svg
               className="w-6 h-6"
@@ -29,7 +29,7 @@ export default function Footer() {
               />
             </svg>
           </a>
-          <a href="#" className="text-gray-400 hover:text-gray-500">
+          <a href="https://twitter.com/SponsorCat" className="text-gray-400 hover:text-gray-500">
             <span className="sr-only">Twitter</span>
             <svg
               className="w-6 h-6"
@@ -45,7 +45,7 @@ export default function Footer() {
             </svg>
           </a>
 
-          <a href="#" className="text-gray-400 hover:text-gray-500">
+          <a href="https://discord.gg/kvHjfhfYz6" className="text-gray-400 hover:text-gray-500">
             <span className="sr-only">Discord</span>
             <svg
               className="w-6 h-6"

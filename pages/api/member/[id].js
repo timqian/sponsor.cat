@@ -1,4 +1,5 @@
 export default function handler(req, res) {
+	// TODO: get address/ens fron id                                                                                                                                                                                                                                                                                                                                                                                                                    
   const { id } = req.query;
 	res.json({
 		"description": "Friendly OpenSea Creature that enjoys long swims in the ocean.", 

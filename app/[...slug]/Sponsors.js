@@ -1,3 +1,5 @@
+"use client";
+
 import UserCard from "./UserCard";
 
 export default function Sponsors({ sponsors }) {

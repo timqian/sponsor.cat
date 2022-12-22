@@ -1,3 +1,5 @@
+"use client";
+
 import { Dialog, Transition, Tab } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import {
@@ -46,9 +48,9 @@ export default function SponsorBtn({ address }) {
       <button
         type="button"
         onClick={openModal}
-        className="px-4 py-2 text-white bg-slate-800 border border-transparent rounded-lg hover:bg-slate-700"
+        className="px-4 py-2 text-white bg-slate-800 border border-transparent rounded-full hover:bg-slate-700 font-medium"
       >
-        ❤️ Sponsor
+        ❤️&nbsp;Sponsor
       </button>
 
       <Transition appear show={isOpen} as={Fragment}>

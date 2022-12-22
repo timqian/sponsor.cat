@@ -55,7 +55,7 @@ export default () => {
               }
               return (
                 <div className="flex gap-1">
-                  <button
+                  {/* <button
                     onClick={openChainModal}
                     className="flex items-center gap-1 p-1 rounded-full hover:bg-gray-100"
                     type="button"
@@ -68,7 +68,7 @@ export default () => {
                       />
                     )}
                     <ChevronDownIcon className="w-4" aria-hidden="true" />
-                  </button>
+                  </button> */}
                   <Menu as="div" className="relative flex-shrink-0">
                     <div>
                       <Menu.Button className="flex items-center border p-1 rounded-full bg-white hover:bg-gray-100 text-sm">

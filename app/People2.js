@@ -7,6 +7,7 @@ const people = [
     role: "Co-Founder / CTO",
     imageUrl:
       "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+
   },
   {
     name: "vitalik.eth",
@@ -45,7 +46,7 @@ const people = [
       "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
   },
   {
-    name: "Ethereum.eth",
+    name: "ethereum.eth",
     role: "Co-Founder / CTO",
     imageUrl:
       "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
@@ -64,7 +65,7 @@ const people = [
       "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
   },
   {
-    name: "benahorowitz.eth",
+    name: "wong2.eth",
     role: "Co-Founder / CTO",
     imageUrl:
       "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
@@ -100,11 +101,11 @@ export default function People() {
     return () => clearInterval(id);
   }, []);
   return (
-    <div className="mt-24">
+    <div className="mt-16 md:mt-24">
       <div className="flex justify-center">
-        <div className="relative max-w-4xl ">
-          <div className="absolute left-0 md:w-40 w-20 h-20 bg-gradient-to-r from-white to-white/0"></div>
-          <div className="absolute right-0 md:w-40 w-20 h-20 bg-gradient-to-l from-white to-white/0"></div>
+        <div className="relative max-w-4xl overflow-scroll">
+          <div className="absolute left-0 md:w-40 w-20 h-24 bg-gradient-to-r from-white to-white/0"></div>
+          <div className="absolute right-0 md:w-40 w-20 h-24 bg-gradient-to-l from-white to-white/0"></div>
           <ul
             id="flavoursContainer"
             className="w-full flex flex-nowrap overflow-x-scroll"
@@ -120,11 +121,11 @@ export default function People() {
                   href={`/${person.name}`}
                 >
                   <img
-                    className="h-20 w-20 rounded-full flex-shrink-0  ring-2 ring-white mx-4"
+                    className="w-16 rounded-full flex-shrink-0 mx-4"
                     src={`https://effigy.im/a/${person.name}.svg`}
                     alt=""
                   />
-                  <span className="pt-2 ">{person.name}</span>
+                  <span className="pt-3">{person.name}</span>
                   {/* <div className="space-y-2">
                     <div className="text-xs font-medium lg:text-sm">
                       <h3>{person.name}</h3>

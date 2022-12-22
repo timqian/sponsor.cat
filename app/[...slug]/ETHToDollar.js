@@ -1,3 +1,5 @@
+"use client";
+
 import useCoinPrice from "../../hooks/useCoinPrice";
 
 export default function App({ ETHAmount }) {

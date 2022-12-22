@@ -62,7 +62,7 @@ export default function SearchAddr() {
             id="search"
             name="search"
             autoComplete="off"
-            className="block w-full rounded-full border border-gray-300 bg-white py-2 pl-10 pr-3 leading-5 placeholder-gray-500 focus:border-indigo-500 focus:placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm"
+            className="block w-full rounded-full border text-sm border-gray-300 py-1 pl-10 pr-3 leading-6 bg-gray-50 placeholder-gray-500 focus:border-indigo-500 focus:placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-indigo-500"
             placeholder="ETH address or ENS name"
             type="text"
             onKeyDown={handleKeyDown}

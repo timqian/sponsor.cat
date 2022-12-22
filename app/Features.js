@@ -1,5 +1,4 @@
-import { BoltIcon, GlobeAltIcon, ScaleIcon } from '@heroicons/react/24/outline'
-
+import { BoltIcon, GlobeAltIcon, ScaleIcon } from "@heroicons/react/24/outline";
 
 import {
   ArrowPathIcon,
@@ -8,71 +7,103 @@ import {
   LockClosedIcon,
   ServerIcon,
   ShieldCheckIcon,
-} from '@heroicons/react/24/outline'
+} from "@heroicons/react/24/outline";
+import FeatureCard from "./FeatureCard";
 
 const features = [
-	{
-    name: 'Sponorship NFTs',
+  {
+    name: "Sponorship NFTs",
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      "After sponsoring an creator, sponsor get an NFT representing their sponsorship",
     icon: GlobeAltIcon,
+    pattern: {
+      y: 16,
+      squares: [
+        [0, 1],
+        [1, 3],
+      ],
+    },
   },
   {
-    name: 'No intermediary',
+    name: "No intermediary",
     description:
-      'The founds directly go to the creator. No middle. And sponsor cat takes 0 fee.',
+      "The founds directly go to the creator. Sponsor cat takes 0 fee.",
     icon: ScaleIcon,
+    pattern: {
+      y: -6,
+      squares: [
+        [-1, 2],
+        [1, 3],
+      ],
+    },
   },
   {
-    name: 'Sponor any one',
+    name: "Sponor anyone",
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      "You can sponsor a creator as long as you know creator's ETH address or ENS name",
     icon: BoltIcon,
+    pattern: {
+      y: 32,
+      squares: [
+        [0, 2],
+        [1, 4],
+      ],
+    },
   },
   {
-    name: 'Advanced Security',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: ShieldCheckIcon,
-  },
-  {
-    name: 'Powerful API',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
+    name: "Embed to your website",
+    description:
+      "We provide a simple way to help you embed your sponsors to your website",
     icon: CogIcon,
+    pattern: {
+      y: 22,
+      squares: [[0, 1]],
+    },
   },
   {
-    name: 'Database Backups',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: ServerIcon,
+    name: "API",
+    description: "You can use our APIs to get your sponsors' details",
+    icon: ShieldCheckIcon,
+    pattern: {
+      y: 22,
+      squares: [
+        [-1, 1],
+        [0, 3],
+      ],
+    },
   },
-]
+  {
+    name: "Open source",
+    description:
+      "The whole solution is open-sourced, transparent and trustworthy",
+    icon: ServerIcon,
+    pattern: {
+      y: 2,
+      squares: [
+        [0, 1],
+        [1, 4],
+      ],
+    },
+  },
+];
 
-export default function Example() {
+export default function Features() {
   return (
-    <div className="relative py-24">
+    <div className="relative py-32">
       <div className="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
-
+        {/* <h2 className="text-center text-3xl font-medium leading-8  text-gray-700 sm:text-4xl pb-8">
+          Features
+        </h2> */}
         <div className="">
           <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((feature) => (
               <div key={feature.name} className="pt-6">
-                <div className="flow-root rounded-lg bg-gray-50 px-6 pb-8">
-                  <div className="-mt-6">
-                    <div>
-                      <span className="inline-flex items-center justify-center rounded-xl bg-indigo-500 p-3 shadow-lg">
-                        <feature.icon className="h-8 w-8 text-white" aria-hidden="true" />
-                      </span>
-                    </div>
-                    <h3 className="mt-8 text-lg font-semibold leading-8 tracking-tight text-gray-900">
-                      {feature.name}
-                    </h3>
-                    <p className="mt-5 text-base leading-7 text-gray-600">{feature.description}</p>
-                  </div>
-                </div>
+                <FeatureCard feature={feature} />
               </div>
             ))}
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
