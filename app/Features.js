@@ -14,7 +14,7 @@ const features = [
   {
     name: "Sponorship NFTs",
     description:
-      "After sponsoring an creator, sponsor get an NFT representing their sponsorship",
+      "After sponsoring an creator, sponsors get NFTs representing their sponsorship",
     icon: GlobeAltIcon,
     pattern: {
       y: 16,
@@ -27,7 +27,7 @@ const features = [
   {
     name: "No intermediary",
     description:
-      "The founds directly go to the creator. Sponsor cat takes 0 fee.",
+      "The founds go directly and instantly to the creators. Sponsor cat takes 0 fee.",
     icon: ScaleIcon,
     pattern: {
       y: -6,
@@ -62,7 +62,7 @@ const features = [
   },
   {
     name: "API",
-    description: "You can use our APIs to get your sponsors' details",
+    description: "You can use our APIs to get sponsors' details",
     icon: ShieldCheckIcon,
     pattern: {
       y: 22,

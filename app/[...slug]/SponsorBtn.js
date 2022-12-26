@@ -47,13 +47,13 @@ export default function SponsorBtn({ address, text }) {
   return (
     <>
       {!text ? (
-        <button
+        <Button
           type="button"
           onClick={openModal}
-          className="px-4 py-2 text-white bg-slate-800 border border-transparent rounded-full hover:bg-slate-700 font-medium"
+          // className="px-4 py-2 text-white bg-slate-800 border border-transparent rounded-full hover:bg-slate-700 font-medium"
         >
           ❤️&nbsp;Sponsor
-        </button>
+        </Button>
       ) : (
         <button
           type="button"
