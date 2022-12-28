@@ -6,11 +6,13 @@ import Link from "next/link";
 import classNames from "clsx";
 import Image from "next/image";
 
+import shortAddress from "../utils/shortAddress";
+
 function isAddr(value) {
   return ethers.utils.isAddress(value) || value.includes(".eth");
 }
 
-const Person = ({ address, description }) => (
+const Person = ({ address, description, short }) => (
   <Link
     href={`/${address}`}
     className="p-4 hover:bg-gray-100 flex justify-between items-center"
@@ -23,7 +25,7 @@ const Person = ({ address, description }) => (
         width={45}
         height={45}
       />
-      <span>{address}</span>
+      <span>{short ? shortAddress(address) : address}</span>
     </div>
     <span className="text-sm text-gray-400">{description}</span>
   </Link>
@@ -88,6 +90,7 @@ export default function SearchAddr() {
                 <span>↵</span>
               </Link>
             )}
+            <Person address="0x2093c652baeb79f14d773eed36266258f467d3fc" description="Team sponor.cat" short />
             <Person address="vitalik.eth" description="Founder of Ethereum" />
             <Person address="timqian.eth" description="Building sponor.cat" />
           </div>

@@ -16,7 +16,8 @@ export default function Profile({ address, name }) {
             alt="avatar"
             width={100}
             height={100}
-            className="rounded-full border w-20 md:w-24"
+            className="rounded-full border w-20 h-20 md:w-24 md:h-24"
+            style={{ objectFit: "cover" }}
           />
           <div className="mx-4 flex flex-col justify-center">
             <AddressLine address={address} ensName={name} />
