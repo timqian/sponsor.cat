@@ -54,7 +54,7 @@ export default function Nav() {
                     OpenSea
                   </a> */}
                   <a
-                    href="https://etherscan.io/address/0x9809efe2eb775c932bc1a8573e28b75f07aa7783"
+                    href="https://etherscan.io/address/0x2093c652baeb79f14d773eed36266258f467d3fc"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                   >
                     Contract
@@ -64,7 +64,7 @@ export default function Nav() {
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                   >
                     GitHub
-                  {/* <iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe> */}
+                    {/* <iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe> */}
                   </a>
                 </div>
               </div>

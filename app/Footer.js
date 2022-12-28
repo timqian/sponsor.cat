@@ -89,7 +89,7 @@ export default function Footer() {
             </svg>
           </a> */}
           <a
-            href="https://etherscan.io/address/0x9809efe2eb775c932bc1a8573e28b75f07aa7783"
+            href="https://etherscan.io/address/0x2093c652baeb79f14d773eed36266258f467d3fc"
             className="text-gray-400 hover:text-gray-500"
           >
             <span className="sr-only">Etherscan</span>
