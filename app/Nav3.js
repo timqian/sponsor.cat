@@ -47,17 +47,17 @@ export default function Nav() {
                   >
                     Feedback
                   </a>
-                  {/* <a
-                    href="https://opensea.io/collection/sponsor-cat"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-                  >
-                    OpenSea
-                  </a> */}
                   <a
                     href="https://etherscan.io/address/0x2093c652baeb79f14d773eed36266258f467d3fc"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                   >
                     Contract
+                  </a>
+                  <a
+                    href="https://opensea.io/collection/sponsor-cat"
+                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                  >
+                    OpenSea
                   </a>
                   <a
                     href="https://github.com/timqian/sponsor.cat"
