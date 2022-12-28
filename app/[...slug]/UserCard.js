@@ -16,7 +16,6 @@ export default function UserCard({ sponsor }) {
 
   return (
     <div
-      key={`${address}-${amount}-${createdAt}`}
       className="relative flex items-center space-x-3 rounded-lg border  px-6 py-5 shadow-sm"
     >
       <div className="flex-shrink-0">
