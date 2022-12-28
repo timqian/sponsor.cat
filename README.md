@@ -2,25 +2,29 @@
   <a href="https://nextjs.org">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://sponsor.cat/logo.svg">
-      <img src="https://sponsor.cat/logo.svg" height="128">
+      <img src="https://sponsor.cat/logo.svg" height="100">
     </picture>
     <h1 align="center">Sponsor.cat</h1>
   </a>
 </p>
 
-A decentralized funding platform. Powered by NFTs.
-
-## Development
+## Contributing
 
 ```bash
+# start frontend
 yarn dev
 ```
 
-## Code
+### Code structure
 
 - Smart contract: [./contract/SponsorCat.sol](./contract/sponsorCat.sol)
 - Subgraph: [./subgraph](./subgraph)
 - Frontend: [./app](./app)
+- APIs: [./pages/api](./pages/api)
+
+## Sponsors
+
+https://sponsor.cat/0x2093c652baeb79f14d773eed36266258f467d3fc
 
 <!-- ## Thanks
 - [Nextjs](https://nextjs.org)
