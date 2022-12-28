@@ -23,12 +23,12 @@ export default function Nav() {
                   >
                     <img
                       className="block h-6 w-auto lg:hidden"
-                      src="/cat-paw.svg"
+                      src="/logo.svg"
                       alt="Your Company"
                     />
                     <img
                       className="hidden h-6 w-auto lg:block"
-                      src="/cat-paw.svg"
+                      src="/logo.svg"
                       alt="Your Company"
                     />
                   </Link>

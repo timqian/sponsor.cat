@@ -1,4 +1,12 @@
-# [Sponsor.Cat](https://sponsor.cat)
+<p align="center">
+  <a href="https://nextjs.org">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://sponsor.cat/logo.svg">
+      <img src="https://sponsor.cat/logo.svg" height="128">
+    </picture>
+    <h1 align="center">Sponsor.cat</h1>
+  </a>
+</p>
 
 A decentralized funding platform. Powered by NFTs.
 

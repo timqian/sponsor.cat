@@ -26,7 +26,7 @@ export default function handler(req, res) {
         <img
           width="100"
           height="100"
-          src={`https://sponsor.cat/cat-paw.svg`}
+          src={`https://sponsor.cat/logo.svg`}
           style={{
             marginRight: 30,
           }}
