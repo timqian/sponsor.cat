@@ -121,7 +121,7 @@ export default function People() {
                   href={`/${person.name}`}
                 >
                   <img
-                    className="w-16 rounded-full flex-shrink-0 mx-4"
+                    className="w-16 h-16 rounded-full flex-shrink-0 mx-4"
                     src={`https://effigy.im/a/${person.name}.svg`}
                     alt=""
                   />

@@ -164,7 +164,7 @@ export default function SponsorBtn({ address, text }) {
                           )}
                           {txData && (
                             <div className="mt-6 w-full text-gray-600">
-                              Transaction done!
+                              Transaction done! Try refreshing the page and you will see your sponsorship.
                             </div>
                           )}
                         </div>

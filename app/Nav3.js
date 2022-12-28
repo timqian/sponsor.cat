@@ -53,11 +53,17 @@ export default function Nav() {
                   >
                     GitHub
                   </a>
-                  <a
+                  {/* <a
                     href="https://opensea.io/collection/sponsor-cat"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                   >
                     OpenSea
+                  </a> */}
+                  <a
+                    href="https://etherscan.io/address/0x9809efe2eb775c932bc1a8573e28b75f07aa7783"
+                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                  >
+                    Contract
                   </a>
                 </div>
               </div>
