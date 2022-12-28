@@ -33,7 +33,7 @@ export default async function handler(req, res) {
         "Sponsoring a creator on sponsor.cat is a way to support them and their work.",
       external_url: `https://sponsor.cat/${ens || creatorAddr}`,
       image: `https://sponsor.cat/api/img/${ens || creatorAddr}`,
-      name: `Sponsor of ${ens || creatorAddr}`,
+      name: `Sponsoring ${ens || creatorAddr}`,
       // "attributes": [ ... ]
     });
   } catch (error) {
