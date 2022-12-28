@@ -9,10 +9,10 @@
 </p>
 <p align="center">
   <a aria-label="Twitter" href="https://twitter.com/sponsor.cat">
-    <img src="https://img.shields.io/twitter/follow/sponsorcat?color=1da1f2&label=%40SponsorCat&logo=twitter&style=flat-square&labelColor=000">
+    <img src="https://img.shields.io/twitter/follow/sponsorcat?color=1da1f2&label=%40SponsorCat&logo=twitter&style=for-the-badge&labelColor=000">
   </a>
   <a aria-label="Discord" href="https://discord.gg/kvHjfhfYz6">
-    <img src="https://img.shields.io/discord/1055327879392661648?color=5865f2&label=discord&logo=discord&style=flat-square&labelColor=000">
+    <img src="https://img.shields.io/discord/1055327879392661648?color=5865f2&label=discord&logo=discord&style=for-the-badge&labelColor=000">
   </a>
 </p>
 
