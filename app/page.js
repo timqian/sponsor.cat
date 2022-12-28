@@ -102,6 +102,7 @@ export default function App() {
             Directly
           </span>
         </h1>
+        
         <div className="mx-auto mt-5 md:mt-8 text-gray-500 text-xl md:max-w-lg md:text-center">
           A decentralized funding platform. Powered by NFTs.
         </div>

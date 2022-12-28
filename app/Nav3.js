@@ -47,12 +47,6 @@ export default function Nav() {
                   >
                     Feedback
                   </a>
-                  <a
-                    href="https://github.com/timqian/sponsor.cat"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-                  >
-                    GitHub
-                  </a>
                   {/* <a
                     href="https://opensea.io/collection/sponsor-cat"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
@@ -64,6 +58,13 @@ export default function Nav() {
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                   >
                     Contract
+                  </a>
+                  <a
+                    href="https://github.com/timqian/sponsor.cat"
+                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                  >
+                    GitHub
+                  {/* <iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe> */}
                   </a>
                 </div>
               </div>

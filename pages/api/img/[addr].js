@@ -11,21 +11,39 @@ export default function handler(req, res) {
     (
       <div
         style={{
-          fontSize: 128,
-          background: "white",
+          display: "flex",
+          // fontSize: 60,
+          color: "black",
+          background: "#f6f6f6",
           width: "100%",
           height: "100%",
-          display: "flex",
-          textAlign: "center",
-          alignItems: "center",
+          // paddingTop: 50,
+          flexDirection: "row",
           justifyContent: "center",
+          alignItems: "center",
         }}
       >
-        Sponsor of {addr}
+        <img
+          width="100"
+          height="100"
+          src={`https://sponsor.cat/cat-paw.svg`}
+          style={{
+            marginRight: 30,
+          }}
+        />
+        <img
+          width="100"
+          height="100"
+          src={`https://effigy.im/a/${addr}.svg`}
+          style={{
+            borderRadius: 100,
+          }}
+        />
+        {/* <p style={{fontSize: 20}}>Sponsor of {addr}</p> */}
       </div>
     ),
     {
-      width: 1200,
+      width: 600,
       height: 600,
     }
   );
