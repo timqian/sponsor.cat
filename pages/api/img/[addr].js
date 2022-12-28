@@ -34,7 +34,7 @@ export default function handler(req, res) {
         <img
           width="100"
           height="100"
-          src={`https://effigy.im/a/${addr}.svg`}
+          src={`https://effigy.im/a/${addr}.png`}
           style={{
             borderRadius: 100,
           }}
