@@ -8,7 +8,8 @@ import {
   lightTheme,
 } from "@rainbow-me/rainbowkit";
 import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
-// import { alchemyProvider } from "wagmi/providers/alchemy";
+import { infuraProvider } from 'wagmi/providers/infura'
+import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 
 import Nav from "./Nav3";
@@ -21,7 +22,8 @@ const { chains, provider } = configureChains(
     //, chain.polygon, chain.optimism, chain.arbitrum
   ],
   [
-    // alchemyProvider({ alchemyId: "ZxjRdUkSVxkP-JAKDkmx5L1iTy3IViNR" }),
+    infuraProvider({ apiKey: '4ab8efea600a40e69e014663d8706833' }),
+    alchemyProvider({ alchemyId: "ZxjRdUkSVxkP-JAKDkmx5L1iTy3IViNR" }),
     publicProvider(),
   ]
 );

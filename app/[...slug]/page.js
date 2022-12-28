@@ -71,9 +71,9 @@ export default function Page({ params }) {
   // }
 
   // ens name don't have address
-  // if (slugName && !ensAddress && !addrLoading) {
-  //   return notFound();
-  // }
+  if (slugName && !ensAddress && !addrLoading) {
+    return notFound();
+  }
 
   return (
     <div className="">
