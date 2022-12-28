@@ -79,10 +79,10 @@ export default function Page({ params }) {
     <div className="">
       {/* {address && (
         <> */}
-          <Profile address={address} name={name} />
-          <Tabs creator={creator} tabName={tabName} />
-          <Detail address={address} />
-        {/* </>
+      <Profile address={address} name={name} />
+      <Tabs creator={creator} tabName={tabName} />
+      <Detail address={address} />
+      {/* </>
       )}
       {!address && addrLoading && (
         <section className="animate-pulse max-w-5xl mx-auto mt-28 mb-12 px-4">
