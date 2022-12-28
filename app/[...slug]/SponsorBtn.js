@@ -3,6 +3,7 @@
 import { Dialog, Transition, Tab } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import {
+  useAccount,
   useContractWrite,
   usePrepareContractWrite,
   useWaitForTransaction,
@@ -11,8 +12,11 @@ import contractInfo from "../../contract/index";
 import ETHToDollar from "./ETHToDollar";
 import { ethers } from "ethers";
 import Button from "../../components/Button";
+import { useConnectModal } from "@rainbow-me/rainbowkit";
 
 export default function SponsorBtn({ address, text }) {
+  const { openConnectModal } = useConnectModal();
+  const { isConnected } = useAccount()
   let [isOpen, setIsOpen] = useState(false);
   const [ETHAmount, setETHAmount] = useState(0.01);
 
@@ -49,7 +53,7 @@ export default function SponsorBtn({ address, text }) {
       {!text ? (
         <Button
           type="button"
-          onClick={openModal}
+          onClick={isConnected ? openModal : openConnectModal}
           // className="px-4 py-2 text-white bg-slate-800 border border-transparent rounded-full hover:bg-slate-700 font-medium"
         >
           ❤️&nbsp;Sponsor
@@ -57,7 +61,7 @@ export default function SponsorBtn({ address, text }) {
       ) : (
         <button
           type="button"
-          onClick={openModal}
+          onClick={isConnected ? openModal : openConnectModal}
           className="px-4 py-2 rounded-full hover:bg-gray-200 font-medium"
         >
           ❤️&nbsp;{text}
@@ -164,7 +168,8 @@ export default function SponsorBtn({ address, text }) {
                           )}
                           {txData && (
                             <div className="mt-6 w-full text-gray-600">
-                              Transaction done! Try refreshing the page and you will see your sponsorship.
+                              Transaction done! Try refreshing the page and you
+                              will see your sponsorship.
                             </div>
                           )}
                         </div>
