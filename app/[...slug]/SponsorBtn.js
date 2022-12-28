@@ -11,7 +11,7 @@ import {
 import contractInfo from "../../contract/index";
 import ETHToDollar from "./ETHToDollar";
 import { ethers } from "ethers";
-import Button from "../../components/Button";
+import Button from "../Button";
 import { useConnectModal } from "@rainbow-me/rainbowkit";
 
 export default function SponsorBtn({ address, text }) {
@@ -56,7 +56,7 @@ export default function SponsorBtn({ address, text }) {
           onClick={isConnected ? openModal : openConnectModal}
           // className="px-4 py-2 text-white bg-slate-800 border border-transparent rounded-full hover:bg-slate-700 font-medium"
         >
-          ❤️&nbsp;Sponsor
+          <span className="text-red-400">♡</span>&nbsp;Sponsor
         </Button>
       ) : (
         <button
@@ -64,7 +64,7 @@ export default function SponsorBtn({ address, text }) {
           onClick={isConnected ? openModal : openConnectModal}
           className="px-4 py-2 rounded-full hover:bg-gray-200 font-medium"
         >
-          ❤️&nbsp;{text}
+          <span className="text-red-400">♡</span>&nbsp;{text}
         </button>
       )}
 
@@ -158,7 +158,7 @@ export default function SponsorBtn({ address, text }) {
                             {writeLoading ? (
                               <span>Check your Wallet</span>
                             ) : (
-                              <span>❤️ Sponsor</span>
+                              <span><span className="text-red-400">♡</span>&nbsp;Sponsor</span>
                             )}
                           </button>
 

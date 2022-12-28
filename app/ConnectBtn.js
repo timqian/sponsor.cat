@@ -1,5 +1,5 @@
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import Button from "../components/Button";
+import Button from "./Button";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import classNames from "clsx";
