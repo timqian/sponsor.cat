@@ -153,6 +153,7 @@ export default function SponsorBtn({ address, text }) {
                             type="button"
                             onClick={sponsor}
                             className="mt-6 w-full px-4 py-2 text-white bg-slate-800 border border-transparent rounded-lg hover:bg-slate-700"
+                            disabled={writeLoading}
                           >
                             {writeLoading ? (
                               <span>Check your Wallet</span>

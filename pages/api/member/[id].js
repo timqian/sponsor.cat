@@ -18,6 +18,18 @@ export default async function handler(req, res) {
   const { id } = req.query;
   // const ens = await provider.lookupAddress("0x5555763613a12D8F3e73be831DFf8598089d3dCa");
   // console.log(ens);
+  if (Number(id) == NaN) {
+    res.json({
+      description:
+        "Sponsoring a creator on sponsor.cat is a way to support them and their work.",
+      external_url: `https://sponsor.cat`,
+      image: `https://sponsor.cat/api/img/timqian.eth`,
+      name: `Sponsor Cat`,
+      // "attributes": [ ... ]
+    });
+    return;
+  }
+
   const [creatorAddr] = await tokenContract.functions.creators(id);
   let ens = "";
   // ref: https://vercel.com/docs/concepts/functions/serverless-functions/edge-caching#cache-control
@@ -37,3 +49,6 @@ export default async function handler(req, res) {
   });
   // res.end(`Post: ${id}`);
 }
+
+const a = Number("{i}");
+console.log(a == NaN);
