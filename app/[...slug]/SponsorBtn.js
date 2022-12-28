@@ -56,7 +56,7 @@ export default function SponsorBtn({ address, text }) {
           onClick={isConnected ? openModal : openConnectModal}
           // className="px-4 py-2 text-white bg-slate-800 border border-transparent rounded-full hover:bg-slate-700 font-medium"
         >
-          <span className="text-red-400">♡</span>&nbsp;Sponsor
+          <span className="text-red-400 text-lg">♡</span>&nbsp;Sponsor
         </Button>
       ) : (
         <button
@@ -64,7 +64,7 @@ export default function SponsorBtn({ address, text }) {
           onClick={isConnected ? openModal : openConnectModal}
           className="px-4 py-2 rounded-full hover:bg-gray-200 font-medium"
         >
-          <span className="text-red-400">♡</span>&nbsp;{text}
+          <span className="text-red-400 text-lg">♡</span>&nbsp;{text}
         </button>
       )}
 
@@ -158,7 +158,7 @@ export default function SponsorBtn({ address, text }) {
                             {writeLoading ? (
                               <span>Check your Wallet</span>
                             ) : (
-                              <span><span className="text-red-400">♡</span>&nbsp;Sponsor</span>
+                              <span><span className="text-red-400 text-lg">♡</span>&nbsp;Sponsor</span>
                             )}
                           </button>
 
