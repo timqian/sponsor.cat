@@ -106,26 +106,26 @@ export default function Nav() {
               <Disclosure.Button
                 as="a"
                 href="https://github.com/timqian/sponsor.cat/issues"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-600 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-800"
+                className="text-right block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-600 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-800"
               >
                 Feedback
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="https://github.com/timqian/sponsor.cat"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-600 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-800"
+                className="text-right block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-600 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-800"
               >
                 GitHub
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="https://opensea.io/collection/sponsor-cat"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-600 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-800"
+                className="text-right block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-600 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-800"
               >
                 OpenSea
               </Disclosure.Button>
             </div>
-            <div className="border-t border-gray-200 py-4 pl-3">
+            <div className="border-t border-gray-200 py-4 pr-3 flex justify-end">
               <ConnectButton />
             </div>
           </Disclosure.Panel>

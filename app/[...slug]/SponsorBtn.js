@@ -16,7 +16,7 @@ import { useConnectModal } from "@rainbow-me/rainbowkit";
 
 export default function SponsorBtn({ address, text }) {
   const { openConnectModal } = useConnectModal();
-  const { isConnected } = useAccount()
+  const { isConnected } = useAccount();
   let [isOpen, setIsOpen] = useState(false);
   const [ETHAmount, setETHAmount] = useState(0.01);
 
@@ -25,7 +25,7 @@ export default function SponsorBtn({ address, text }) {
     functionName: "sponsor",
     args: [address],
     overrides: {
-      value: ethers.utils.parseEther(ETHAmount.toString()),
+      value: ethers.utils.parseEther(ETHAmount ? ETHAmount.toString() : "0"),
     },
   });
 
@@ -33,13 +33,20 @@ export default function SponsorBtn({ address, text }) {
     data: writeData,
     isLoading: writeLoading,
     isSuccess: writeSuccess,
-    write: sponsor,
+    write,
   } = useContractWrite(config);
 
   const { data: txData, isLoading: txLoading } = useWaitForTransaction({
     hash: writeData?.hash,
   });
 
+  function sponsor() {
+    if (ETHAmount <= 0.00001) {
+      alert("ETH amount should be > 0.00001");
+      return;
+    }
+    write();
+  }
   function closeModal() {
     setIsOpen(false);
   }
@@ -113,12 +120,14 @@ export default function SponsorBtn({ address, text }) {
                     <Tab.Panels className="p-6">
                       <Tab.Panel>
                         <div>
-                          <label
-                            for="price"
-                            class="block text-sm font-medium text-gray-700"
-                          >
-                            Amount
-                          </label>
+                          <div className="flex justify-between items-end">
+                            <label class="block text-sm font-medium text-gray-700">
+                              Amount
+                            </label>
+                            <span className="text-gray-400 text-xs pr-3">
+                              $ <ETHToDollar ETHAmount={ETHAmount} />
+                            </span>
+                          </div>
                           <div class="relative mt-1 rounded-md shadow-sm">
                             <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-2">
                               <span className="text-gray-500 sm:text-sm inline-flex items-center gap-1">
@@ -137,18 +146,20 @@ export default function SponsorBtn({ address, text }) {
                               name="price"
                               id="price"
                               class="font-semibold text-right block w-full rounded-md border-gray-300 pl-16 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                              placeholder="0.01"
+                              // placeholder="0.01"
                               aria-describedby="price-currency"
                               value={ETHAmount}
                               onChange={(e) => setETHAmount(e.target.value)}
                               autoFocus
                             />
                           </div>
-                          <div className="text-right">
-                            <span className="text-gray-400 text-xs">
-                              $ <ETHToDollar ETHAmount={ETHAmount} /> &nbsp;
+                          <div className="text-right pr-3">
+                            <span className="text-gray-400 text-xs ">
+                              NFTs you will get:{" "}
+                              {Math.round(ETHAmount / 0.00001)}
                             </span>
                           </div>
+
                           <button
                             type="button"
                             onClick={sponsor}
@@ -158,7 +169,10 @@ export default function SponsorBtn({ address, text }) {
                             {writeLoading ? (
                               <span>Check your Wallet</span>
                             ) : (
-                              <span><span className="text-red-400 text-lg">♡</span>&nbsp;Sponsor</span>
+                              <span>
+                                <span className="text-red-400 text-lg">♡</span>
+                                &nbsp;Sponsor
+                              </span>
                             )}
                           </button>
 

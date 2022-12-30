@@ -69,7 +69,7 @@ export default function Footer() {
               />
             </svg>
           </a>
-          <a
+          {/* <a
             href="https://opensea.io/collection/sponsor-cat"
             className="text-gray-400 hover:text-gray-500"
           >
@@ -117,7 +117,7 @@ export default function Footer() {
                 />
               </g>
             </svg>
-          </a>
+          </a> */}
         </span>
       </div>
     </section>

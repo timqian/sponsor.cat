@@ -13,7 +13,7 @@ export default function addr({ address, ensName }) {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="flex space-x-1 items-center justify-center text-gray-800 ">
+        <Menu.Button className="flex space-x-1 items-center justify-center text-gray-800 hover:text-gray-600 ">
           <span className="text-xl md:text-2xl font-bold">
             {ensName || shortAddress(address)}
           </span>

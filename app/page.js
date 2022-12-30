@@ -24,7 +24,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="">
       <div
         className={clsx(
           "fixed top-0 backdrop-blur-xl w-full z-50",
