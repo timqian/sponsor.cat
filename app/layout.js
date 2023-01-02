@@ -23,8 +23,8 @@ const { chains, provider } = configureChains(
   ],
   [
     infuraProvider({ apiKey: '4ab8efea600a40e69e014663d8706833' }),
-    alchemyProvider({ alchemyId: "ZxjRdUkSVxkP-JAKDkmx5L1iTy3IViNR" }),
     publicProvider(),
+    alchemyProvider({ alchemyId: "ZxjRdUkSVxkP-JAKDkmx5L1iTy3IViNR" }),
   ]
 );
 
