@@ -11,8 +11,8 @@ import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 import { infuraProvider } from 'wagmi/providers/infura'
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
+import { AnalyticsWrapper } from './components/analytics';
 
-import Nav from "./Nav3";
 import Footer from "./Footer";
 
 const { chains, provider } = configureChains(
@@ -58,6 +58,7 @@ export default function RootLayout({ children }) {
             <Footer />
           </RainbowKitProvider>
         </WagmiConfig>
+        <AnalyticsWrapper />
       </body>
     </html>
   );
