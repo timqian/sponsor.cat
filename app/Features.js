@@ -15,7 +15,8 @@ const features = [
     name: "Sponorship NFTs",
     description:
       "After sponsoring an creator, sponsors get NFTs representing their sponsorship",
-    icon: GlobeAltIcon,
+    link: "https://opensea.io/collection/sponsor-cat",
+    linkText: "View NFTs on OpenSea",
     pattern: {
       y: 16,
       squares: [
@@ -28,7 +29,8 @@ const features = [
     name: "No intermediary",
     description:
       "The founds go directly and instantly to the creators. Sponsor cat takes 0 fee.",
-    icon: ScaleIcon,
+    link: "https://etherscan.io/address/0x2093c652baeb79f14d773eed36266258f467d3fc",
+    linkText: "View contract on Etherscan",
     pattern: {
       y: -6,
       squares: [
@@ -41,7 +43,8 @@ const features = [
     name: "Sponor anyone",
     description:
       "You can sponsor a creator as long as you know creator's ETH address or ENS name",
-    icon: BoltIcon,
+    link: "https://sponsor.cat/vitalik.eth",
+    linkText: "Sponsor Vitalik Buterin",
     pattern: {
       y: 32,
       squares: [
@@ -54,7 +57,8 @@ const features = [
     name: "Embed to your website",
     description:
       "We provide a simple way to help you embed your sponsors to your website",
-    icon: CogIcon,
+    link: "https://sponsor.cat/",
+    linkText: "Help wanted",
     pattern: {
       y: 22,
       squares: [[0, 1]],
@@ -62,8 +66,10 @@ const features = [
   },
   {
     name: "API",
-    description: "You can use our APIs to get sponsors' details",
+    description: "You can use our APIs to get sponsors' detail information",
     icon: ShieldCheckIcon,
+    link: "https://thegraph.com/hosted-service/subgraph/timqian/sponsorcat",
+    linkText: "Try out the GraphQL API",
     pattern: {
       y: 22,
       squares: [
@@ -76,7 +82,8 @@ const features = [
     name: "Open source",
     description:
       "The whole solution is open-sourced, transparent and trustworthy",
-    icon: ServerIcon,
+    link: "https://github.com/timqian/sponsor.cat",
+    linkText: "View on GitHub",
     pattern: {
       y: 2,
       squares: [

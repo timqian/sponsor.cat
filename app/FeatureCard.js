@@ -18,20 +18,27 @@ function ResourcePattern({ mouseX, mouseY, ...gridProps }) {
 
 export default function FeatureCard({ feature }) {
   return (
-    <div className="flow-root rounded-lg bg-gray-50 px-6 pb-8 relative border">
-      <ResourcePattern {...feature.pattern} />
-      <div className="mt-6">
-        {/* <div>
-			<span className="inline-flex items-center justify-center rounded-xl bg-indigo-500 p-3 shadow-lg">
-				<feature.icon className="h-8 w-8 text-white" aria-hidden="true" />
-			</span>
-		</div> */}
-        <h3 className="mt-8 text-lg font-semibold leading-8 tracking-tight text-gray-900">
-          {feature.name}
-        </h3>
-        <p className="mt-5 text-base leading-7 text-gray-600">
-          {feature.description}
-        </p>
+    <div className="flip">
+      <div className="filp-content flow-root rounded-lg bg-gray-50 relative border h-48 shadow">
+        <ResourcePattern {...feature.pattern} />
+        <div className="card">
+          <div className="mt-6">
+            <h3 className="mt-8 text-lg font-semibold leading-8 tracking-tight text-gray-900">
+              {feature.name}
+            </h3>
+            <p className="mt-5 text-base leading-7 text-gray-600 text-center">
+              {feature.description}
+            </p>
+          </div>
+        </div>
+        <div className="card transform-rotateY-180 w-full h-full left-0 top-0">
+          <a
+            className="block pt-20 w-full h-full rounded-lg font-semibold text-xl"
+            href={feature.link}
+          >
+            {feature.linkText}
+          </a>
+        </div>
       </div>
     </div>
   );

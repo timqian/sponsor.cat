@@ -24,6 +24,23 @@
 
 /* Hide scrollbar for IE, Edge and Firefox */
 #flavoursContainer {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-} 
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.flip:hover .filp-content {
+  transform: rotateY(180deg);
+}
+.filp-content {
+  transform-style: preserve-3d;
+  transition-duration: 500ms;
+}
+
+.card {
+  @apply absolute;
+  backface-visibility: hidden;
+}
+
+.transform-rotateY-180 {
+  transform: rotateY(180deg);
+}
