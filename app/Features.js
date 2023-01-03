@@ -57,7 +57,7 @@ const features = [
     name: "Embed to your website",
     description:
       "We provide a simple way to help you embed your sponsors to your website",
-    link: "https://sponsor.cat/",
+    link: "https://github.com/timqian/sponsor.cat/issues/12",
     linkText: "Help wanted",
     pattern: {
       y: 22,

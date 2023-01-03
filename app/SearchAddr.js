@@ -90,9 +90,9 @@ export default function SearchAddr() {
                 <span>↵</span>
               </Link>
             )}
-            <Person address="0x2093c652baeb79f14d773eed36266258f467d3fc" description="Team sponor.cat" short />
+            <Person address="0x2093c652baeb79f14d773eed36266258f467d3fc" description="Team sponsor.cat" short />
             <Person address="vitalik.eth" description="Founder of Ethereum" />
-            <Person address="timqian.eth" description="Building sponor.cat" />
+            <Person address="timqian.eth" description="Building sponsor.cat" />
           </div>
         </div>
       </div>
