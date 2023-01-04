@@ -12,7 +12,7 @@ import FeatureCard from "./FeatureCard";
 
 const features = [
   {
-    name: "Sponorship NFTs",
+    name: "Sponsorship NFTs",
     description:
       "After sponsoring an creator, sponsors get NFTs representing their sponsorship",
     link: "https://opensea.io/collection/sponsor-cat",
@@ -28,7 +28,7 @@ const features = [
   {
     name: "No intermediary",
     description:
-      "The founds go directly and instantly to the creators. Sponsor cat takes 0 fee.",
+      "The funds go directly and instantly to the creators. Sponsor cat takes 0 fee.",
     link: "https://etherscan.io/address/0x2093c652baeb79f14d773eed36266258f467d3fc",
     linkText: "View contract on Etherscan",
     pattern: {
@@ -40,7 +40,7 @@ const features = [
     },
   },
   {
-    name: "Sponor anyone",
+    name: "Sponsor anyone",
     description:
       "You can sponsor a creator as long as you know creator's ETH address or ENS name",
     link: "https://sponsor.cat/vitalik.eth",
