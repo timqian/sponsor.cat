@@ -14,10 +14,10 @@
   <a aria-label="Discord" href="https://discord.gg/kvHjfhfYz6">
     <img src="https://img.shields.io/discord/1055327879392661648?color=5865f2&label=discord&logo=discord&style=for-the-badge&labelColor=000">
   </a>
-  <a aria-label="GitHub Issues" href="https://discord.gg/kvHjfhfYz6">
+  <a aria-label="GitHub Issues" href="https://github.com/timqian/sponsor.cat/issues">
     <img src="https://img.shields.io/github/issues/timqian/sponsor.cat?color=555&logo=github&style=for-the-badge&labelColor=000">
   </a>
-  <a aria-label="Help wanted" href="https://discord.gg/kvHjfhfYz6">
+  <a aria-label="Help wanted" href="https://github.com/timqian/sponsor.cat/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22">
     <img src="https://img.shields.io/github/issues-raw/timqian/sponsor.cat/help%20wanted?color=008673&label=Help%20wanted&logo=github&style=for-the-badge&labelColor=000">
   </a> 
 </p>
