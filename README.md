@@ -4,7 +4,7 @@
       <source media="(prefers-color-scheme: dark)" srcset="https://sponsor.cat/logo.svg">
       <img src="https://sponsor.cat/logo.svg" height="100">
     </picture>
-    <h1 align="center">Sponsor.cat</h1>
+    <h1 align="center">Sponsor.Cat</h1>
   </a>
 </p>
 <p align="center">
