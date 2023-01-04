@@ -14,16 +14,24 @@
   <a aria-label="Discord" href="https://discord.gg/kvHjfhfYz6">
     <img src="https://img.shields.io/discord/1055327879392661648?color=5865f2&label=discord&logo=discord&style=for-the-badge&labelColor=000">
   </a>
+  <a aria-label="GitHub Issues" href="https://discord.gg/kvHjfhfYz6">
+    <img src="https://img.shields.io/github/issues/timqian/sponsor.cat?color=fff&logo=github&style=for-the-badge&labelColor=000">
+  </a>
+  <a aria-label="Help wanted" href="https://discord.gg/kvHjfhfYz6">
+    <img src="https://img.shields.io/github/issues-raw/timqian/sponsor.cat/help%20wanted?color=fff&label=Help%20wanted&logo=github&style=for-the-badge&labelColor=000">
+  </a> 
 </p>
 
 ## Contributing
 
 #### Start frontend dev server
+
 ```bash
 yarn dev
 ```
 
 #### Code structure
+
 - Smart contract: [./contract](./contract/sponsorCat.sol)
 - Subgraph: [./subgraph](./subgraph)
 - Frontend: [./app](./app)
