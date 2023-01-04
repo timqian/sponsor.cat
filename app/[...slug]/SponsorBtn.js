@@ -20,7 +20,11 @@ export default function SponsorBtn({ address, text }) {
   let [isOpen, setIsOpen] = useState(false);
   const [ETHAmount, setETHAmount] = useState(0.01);
 
-  const { config } = usePrepareContractWrite({
+  const {
+    config,
+    isError: isPrepareError,
+    error: prepareError,
+  } = usePrepareContractWrite({
     ...contractInfo,
     functionName: "sponsor",
     args: [address],
@@ -33,6 +37,7 @@ export default function SponsorBtn({ address, text }) {
     data: writeData,
     isLoading: writeLoading,
     isSuccess: writeSuccess,
+    isError: writeError,
     write,
   } = useContractWrite(config);
 
@@ -44,6 +49,15 @@ export default function SponsorBtn({ address, text }) {
     if (ETHAmount <= 0.00001) {
       alert("ETH amount should be > 0.00001");
       return;
+    }
+    if (isPrepareError) {
+      if (prepareError.message.includes("insufficient funds")) {
+        alert("Insufficient funds")
+        return;
+      } else {
+        alert(prepareError.message);
+        return;
+      }
     }
     write();
   }

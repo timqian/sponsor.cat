@@ -78,7 +78,7 @@ export default () => {
                           src={
                             account.address
                               ? `https://effigy.im/a/${account.address}.svg`
-                              : "/default.svg"
+                              : "/spinner.gif"
                           }
                           alt="profile"
                         />

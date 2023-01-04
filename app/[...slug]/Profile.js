@@ -20,7 +20,7 @@ export default function Profile({ address, name }) {
         <div className="flex">
           <Image
             src={
-              address ? `https://effigy.im/a/${address}.svg` : "/default.svg"
+              address ? `https://effigy.im/a/${address}.svg` : "/spinner.gif"
             }
             alt="avatar"
             width={100}

@@ -15,15 +15,13 @@ export default function UserCard({ sponsor }) {
   });
 
   return (
-    <div
-      className="relative flex items-center space-x-3 rounded-lg border  px-6 py-5 shadow-sm"
-    >
+    <div className="relative flex items-center space-x-3 rounded-lg border  px-6 py-5 shadow-sm">
       <div className="flex-shrink-0">
         <Link href={`/${ensName || address}`}>
           <Image
             className="h-10 w-10 rounded-full"
             src={
-              address ? `https://effigy.im/a/${address}.svg` : "/default.svg"
+              address ? `https://effigy.im/a/${address}.svg` : "/spinner.gif"
             }
             alt=""
             width={45}

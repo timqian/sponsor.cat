@@ -3,7 +3,10 @@
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import classNames from "../../utils/classNames";
-import { ClipboardIcon } from "@heroicons/react/24/outline";
+import {
+  ClipboardIcon,
+  ArrowTopRightOnSquareIcon,
+} from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
 import shortAddress from "../../utils/shortAddress";
@@ -34,6 +37,23 @@ export default function addr({ address, ensName }) {
           static
           className="absolute left-0 z-10 mt-2 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
         >
+          <div className="py-1">
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  // target="_blank"
+                  href={`https://mest.io/stories/head-first-wallet?address=${address}`}
+                  className={classNames(
+                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                    "group flex items-center px-4 py-2 justify-between text-sm cursor-pointer"
+                  )}
+                >
+                  <span className="mr-6">Portfolio</span>
+                  <ArrowTopRightOnSquareIcon className="w-4 h-4 group-hover:-rotate-12" />
+                </a>
+              )}
+            </Menu.Item>
+          </div>
           {ensName && (
             <div className="py-1">
               <Menu.Item>
