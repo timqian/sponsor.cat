@@ -96,7 +96,7 @@ const features = [
 
 export default function Features() {
   return (
-    <div className="relative py-32">
+    <div className="relative mt-12 md:mt-32">
       <div className="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
         {/* <h2 className="text-center text-3xl font-medium leading-8  text-gray-700 sm:text-4xl pb-8">
           Features

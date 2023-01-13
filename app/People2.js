@@ -29,7 +29,6 @@ const people = [
   {
     name: "nick.eth",
   },
-
   {
     name: "tianlitao.eth",
   },
@@ -71,7 +70,7 @@ export default function People() {
     return () => clearInterval(id);
   }, []);
   return (
-    <div className="mt-16 md:mt-24">
+    <div className="mt-8 md:mt-24">
       <div className="flex justify-center">
         <div className="relative max-w-4xl overflow-scroll">
           <div className="absolute left-0 md:w-40 w-20 h-24 bg-gradient-to-r from-white to-white/0"></div>

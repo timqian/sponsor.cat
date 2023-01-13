@@ -94,10 +94,10 @@ export default function App() {
         //   backgroundRepeat: "no-repeat",
         //   backgroundPosition: "left top",
         // }}
-        className="container max-w-lg px-4 mt-40 md:mt-52 pb-8 mx-auto text-left md:max-w-none md:text-center"
+        className="container max-w-lg px-4 mt-28  md:mt-52 pb-8 mx-auto md:max-w-none text-center"
       >
-        <h1 className="font-extrabold tracking-tight text-gray-900 text-center sm:leading-none text-5xl lg:text-8xl">
-          <span className="inline md:block">Sponsor creators</span>{" "}
+        <h1 className="font-extrabold tracking-tight text-gray-900 text-4xl lg:text-8xl">
+          <span className="inline md:block">Sponsor Creators</span>{" "}
           <span className="background-animate relative mt-2">
             Directly
           </span>
@@ -114,7 +114,7 @@ export default function App() {
         </span> */}
         </h1>
         
-        <div className="mx-auto mt-8 text-gray-600 text-xl md:max-w-lg text-center">
+        <div className="mx-auto mt-8 text-gray-600 text-lg md:text-xl md:max-w-lg font-light md:font-normal">
           A decentralized funding platform. Powered by NFTs.
         </div>
 
