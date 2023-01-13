@@ -22,12 +22,12 @@ export default function Nav() {
                     className="text-2xl font-black text-gray-900 align-center"
                   >
                     <img
-                      className="block h-6 w-auto lg:hidden"
+                      className="block h-8 w-auto lg:hidden"
                       src="/logo.svg"
                       alt="Your Company"
                     />
                     <img
-                      className="hidden h-6 w-auto lg:block"
+                      className="hidden h-8 w-auto lg:block"
                       src="/logo.svg"
                       alt="Your Company"
                     />
