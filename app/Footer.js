@@ -11,7 +11,7 @@ export default function Footer() {
           Sponsor.cat
         </Link>
         <span className="mt-4 text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l sm:border-gray-200 sm:mt-0">
-          Made with ♡ by timqian.eth
+          Made with ♡ by <Link href="/timqian.eth" className="hover:underline">timqian.eth</Link>
         </span>
         <span className="inline-flex justify-center mt-4 space-x-5 sm:ml-auto sm:mt-0 sm:justify-start items-center">
           <a
